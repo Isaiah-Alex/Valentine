@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For You ❤️</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #ff4d6d, #ff8fa3);
+      text-align: center;
+      color: white;
+      overflow: hidden;
+      padding: 20px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(15px);
+      padding: 35px 25px;
+      border-radius: 20px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+      animation: fadeIn 1s ease;
+    }
+
+    h1 {
+      font-size: 22px;
+      margin-bottom: 25px;
+      line-height: 1.4;
+    }
+
+    button {
+      padding: 14px 35px;
+      font-size: 18px;
+      border: none;
+      border-radius: 50px;
+      background: white;
+      color: #ff4d6d;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s ease;
+      width: 100%;
+    }
+
+    button:active {
+      transform: scale(0.95);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .love-message {
+      animation: fadeIn 1s ease;
+      font-size: 24px;
+      padding: 20px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="card" id="card">
+    <h1>Will you be my Val Tiode? ❤️</h1>
+    <button onclick="sayYes()">Yes 💕</button>
+  </div>
+
+  <script>
+    function sayYes() {
+      document.body.innerHTML = `
+        <div class="love-message">
+          You just made me the happiest man alive 🥹❤️ <br><br>
+          I can’t wait to make beautiful memories with you 💖
+        </div>
+      `;
+      document.body.style.background = "#ff4d6d";
+    }
+  </script>
+
+</body>
+</html>
